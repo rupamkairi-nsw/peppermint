@@ -1,18 +1,22 @@
 {
-    "private": true,
-    "scripts": {
-      "build": "turbo run build",
-      "dev": "turbo run dev --parallel",
-      "lint": "turbo run lint",
-      "format": "prettier --write \"**/*.{ts,tsx,md}\""
-    },
-    "devDependencies": {
-      "prettier": "^2.5.1",
-      "turbo": "latest"
-    },
-    "workspaces": [
-        "apps/*",
-        "packages/*"
-      ],
-    "packageManager": "yarn@1.22.17"
-  }
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prisma:migrate-dev": "npm run migrate-dev --prefix apps/client",
+    "prisma:migrate": "npm run migrate-dev --prefix apps/client",
+    "docker:postgres": "docker-compose --file scripts/postgres-compose.yml up",
+    "docker:up": "docker-compose --file scripts/docker-compose.yml up"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "yarn@1.22.17"
+}
