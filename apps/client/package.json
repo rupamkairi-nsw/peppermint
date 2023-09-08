@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "seed": "prisma db seed",
-    "migrate-dev": "prisma migrate dev --preview-feature",
+    "migrate-dev": "prisma migrate dev seed",
     "migrate": "prisma migrate deploy",
     "generate": "prisma generate",
     "docker": "yarn run migrate && yarn run generate && yarn run seed && yarn start",
