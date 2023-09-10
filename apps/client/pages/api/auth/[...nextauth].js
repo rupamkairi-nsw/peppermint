@@ -1,32 +1,13 @@
 import bcrypt from "bcrypt";
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers/credentials";
-import GithubProvider from "next-auth/providers/github";
-import Auth0Provider from "next-auth/providers/auth0";
-import AzureADProvider from "next-auth/providers/azure-ad";
-import { PrismaAdapter } from "@auth/prisma-adapter";
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { prisma } from "../../../prisma/prisma";
 
 const options = {
   site: process.env.NEXTAUTH_URL,
   adapter: PrismaAdapter(prisma),
   providers: [
-    GithubProvider({
-      clientId: process.env.SSO_GITHUB_CLIENTID,
-      clientSecret: process.env.SSO_GITHUB_CLIENTSECRET,
-      allowDangerousEmailAccountLinking: true,
-    }),
-    Auth0Provider({
-      clientId: process.env.SSO_AUTH0_CLIENTID,
-      clientSecret: process.env.SSO_AUTH0_CLIENTSECRET,
-      issuer: process.env.SSO_AUTH0_ISSUER,
-      allowDangerousEmailAccountLinking: true,
-    }),
-    AzureADProvider({
-      clientId: process.env.SSO_AZAD_CLIENTID,
-      clientSecret: process.env.SSO_AZAD_CLIENTSECRET,
-      tenantId: process.env.SSO_AZAD_TENANTID,
-    }),
     Providers({
       name: "Credentials",
       async authorize(credentials, req, res) {
@@ -96,12 +77,12 @@ const options = {
       if (!user) {
         session.user = token;
         session.user.id = check_user.id;
-        session.user.isAdmin = check_user.isAdmin
+        session.user.isAdmin = check_user.isAdmin;
         return Promise.resolve(session);
       } else {
         session.user = user;
         session.user.id = check_user.id;
-        session.user.isAdmin = check_user.isAdmin
+        session.user.isAdmin = check_user.isAdmin;
         return Promise.resolve(session);
       }
     },
