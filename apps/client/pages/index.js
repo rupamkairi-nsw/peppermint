@@ -174,7 +174,7 @@ export default function Home() {
                   </span>
                   <div>
                     <div className="flex items-center">
-                      <span className="pt-4 text-2xl font-bold leading-7 text-gray-900 sm:leading-9 sm:truncate">
+                      <span className="pt-4 text-2xl font-bold leading-7 text-gray-900 sm:ml-3 sm:leading-9 sm:truncate">
                         {t("hello_good")}
                         {hour < 12
                           ? t("hello_morning")

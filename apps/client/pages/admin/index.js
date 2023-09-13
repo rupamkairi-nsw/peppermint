@@ -7,9 +7,9 @@ export default function BlankPage() {
           Peppermint
         </h1> */}
       </div>
-      {/* <h1 className="font-bold text-xl text-center">
-        Welcome to peppermint! Thank you for checking us out!
-      </h1> */}
+      <h1 className="font-bold text-xl text-center">
+        Welcome to Ticketing System.
+      </h1>
     </div>
   );
 }

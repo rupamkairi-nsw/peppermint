@@ -1,7 +1,7 @@
 {
   "hello_good": "Good",
-  "hello_morning": "Morning",
-  "hello_afternoon": "Afternoon",
+  "hello_morning": " Morning",
+  "hello_afternoon": " Afternoon",
   "sl_dashboard": "Dashboard",
   "sl_tickets": "Tickets",
   "sl_history": "History",

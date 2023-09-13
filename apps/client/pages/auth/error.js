@@ -118,7 +118,7 @@ export default function Login({ csrfToken }) {
           </div>
 
           <div className="mt-8 text-center">
-            <span className="font-bold">Built with 💚 by Peppermint Labs</span>
+            {/* <span className="font-bold">Built with 💚 by Peppermint Labs</span> */}
           </div>
 
           {/* <div className="mt-6">

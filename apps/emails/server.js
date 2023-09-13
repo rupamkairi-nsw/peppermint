@@ -36,8 +36,11 @@ const getEmails = async () => {
         password: process.env.IMAP_PASSWORD,
         host: process.env.IMAP_HOST,
         port: process.env.IMAP_PORT /* ?? 993 */,
-        // tls: true,
-        // tlsOptions: { servername: queues[i].hostname },
+        tls: true,
+        tlsOptions: {
+          /* servername: queues[i].hostname, */ rejectUnauthorized: false,
+        },
+        authTimeout: 3000,
       };
 
       const imap = new Imap(imapConfig);

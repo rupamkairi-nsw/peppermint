@@ -207,6 +207,9 @@ export default function NewLayout({ children }) {
                       src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                       alt="Your Company"
                     /> */}
+                    <h1 className="text-2xl ml-2 mt-5 hover:text-green-600 font-extrabold ">
+                      Ticketing System
+                    </h1>
                   </div>
                   <nav className="flex flex-1 flex-col">
                     <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -328,12 +331,12 @@ export default function NewLayout({ children }) {
         {/* Sidebar component, swap this element with another sidebar if you like */}
         <div className="flex grow flex-col gap-y-5 overflow-y-auto  bg-gray-900 px-6 pb-4">
           <div className="flex align-middle flex-row h-16 items-center">
-            {/* <img className="h-8 w-auto" src="/logo.svg" alt="Workflow" />
+            {/* <img className="h-8 w-auto" src="/logo.svg" alt="Workflow" /> */}
             <Link href="https://peppermint.sh">
-              <h1 className="text-4xl ml-2 mt-5 hover:text-green-600 font-extrabold text-white">
-                Peppermint
+              <h1 className="text-2xl ml-2 mt-5 hover:text-green-600 font-extrabold text-white">
+                Ticketing System
               </h1>
-            </Link> */}
+            </Link>
           </div>
           <nav className="flex flex-1 flex-col">
             <ul role="list" className="flex flex-1 flex-col gap-y-7">

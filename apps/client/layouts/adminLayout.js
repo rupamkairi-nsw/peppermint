@@ -17,14 +17,14 @@ export default function AdminLayout({ children }) {
       name: t("sl_clients"),
       href: "/admin/clients",
     },
-    {
-      name: "Email Queues",
-      href: "/admin/email-queues",
-    },
-    {
-      name: "Webhooks",
-      href: "/admin/webhooks",
-    },
+    // {
+    //   name: "Email Queues",
+    //   href: "/admin/email-queues",
+    // },
+    // {
+    //   name: "Webhooks",
+    //   href: "/admin/webhooks",
+    // },
     // {
     //   name: "Notifications",
     //   href: "/admin/notifications",

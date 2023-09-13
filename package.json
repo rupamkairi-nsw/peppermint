@@ -6,7 +6,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prisma:migrate-dev": "npm run migrate-dev --prefix apps/client",
-    "prisma:migrate": "npm run migrate-dev --prefix apps/client",
+    "prisma:migrate": "npm run migrate --prefix apps/client",
     "prisma:seed": "npm run seed --prefix apps/client",
     "docker:postgres": "docker-compose --file scripts/postgres-compose.yml up",
     "docker:up": "docker-compose --file scripts/docker-compose.yml up"

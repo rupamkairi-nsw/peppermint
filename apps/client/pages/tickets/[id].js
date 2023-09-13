@@ -634,7 +634,7 @@ export default function Ticket() {
                             </RichTextEditor>
                           ) : (
                             <span className="break-words">
-                              {renderHTML(data.ticket.detail)}
+                              {renderHTML(data?.ticket?.title)}
                             </span>
                           )}
                         </div>
