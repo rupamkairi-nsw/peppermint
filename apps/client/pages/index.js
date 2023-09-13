@@ -329,7 +329,7 @@ export default function Home() {
                             )}
                           </td>
                           <td className="px-3 py-1 text-sm text-gray-500 w-[160px]">
-                            {moment(item.createdAt).format('DD/MM/YYYY')}
+                            {moment(item.createdAt).format("DD/MM/YYYY")}
                           </td>
                           <td className="px-3 py-1 text-sm text-gray-500 w-[64px]">
                             {item.assignedTo ? item.assignedTo.name : "-"}
@@ -513,7 +513,7 @@ export default function Home() {
           </>
         )}
       </div>
-      <div className="flex-1 xl:ml-4 bg-white px-2 rounded-lg shadow-md pt-2 2xl:max-h-[53vh]">
+      <div className="flex-1 xl:ml-4 bg-white rounded-lg shadow-md p-4 md:p-6 2xl:max-h-[53vh]">
         <span className="font-bold text-2xl">Reminders</span>
         <ListTodo />
       </div>

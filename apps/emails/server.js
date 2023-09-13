@@ -1,13 +1,19 @@
+require("dotenv").config();
 const express = require("express");
 const Imap = require("imap");
 const { simpleParser } = require("mailparser");
 const { PrismaClient } = require("@prisma/client");
 
-require("dotenv").config();
+let client;
+try {
+  client = new PrismaClient();
+} catch (error) {
+  console.log(error);
+  console.log("\n\n");
+}
 
-const client = new PrismaClient();
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT;
 
 app.use(express.json());
 
@@ -26,12 +32,12 @@ const getEmails = async () => {
 
     for (let i = 0; i < queues.length; i++) {
       var imapConfig = {
-        user: queues[i].username,
-        password: queues[i].password,
-        host: queues[i].hostname,
-        port: 993,
-        tls: true,
-        tlsOptions: { servername: queues[i].hostname },
+        user: process.env.IMAP_USERNAME,
+        password: process.env.IMAP_PASSWORD,
+        host: process.env.IMAP_HOST,
+        port: process.env.IMAP_PORT /* ?? 993 */,
+        // tls: true,
+        // tlsOptions: { servername: queues[i].hostname },
       };
 
       const imap = new Imap(imapConfig);

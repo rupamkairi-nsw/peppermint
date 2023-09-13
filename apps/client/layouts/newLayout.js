@@ -59,21 +59,21 @@ export default function NewLayout({ children }) {
       href: `/new`,
       icon: PlusIcon,
       current: location.pathname === "/new" ? true : false,
-      initial: "c",
+      initial: "C",
     },
     {
       name: t("sl_dashboard"),
       href: `/`,
       icon: HomeIcon,
       current: location.pathname === "/" ? true : false,
-      initial: "h",
+      initial: "H",
     },
     {
       name: t("sl_notebook"),
       href: `/notebook`,
       icon: FolderIcon,
       current: location.pathname === "/notebook" ? true : false,
-      initial: "n",
+      initial: "N",
     },
     {
       name: t("sl_tickets"),
@@ -81,7 +81,7 @@ export default function NewLayout({ children }) {
       icon: TicketIcon,
       // href: `/${locale}/tickets`,
       href: "/tickets",
-      initial: "t",
+      initial: "T",
     },
     // {
     //   name: "Email Queues",
@@ -202,11 +202,11 @@ export default function NewLayout({ children }) {
                 {/* Sidebar component, swap this element with another sidebar if you like */}
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
                   <div className="flex h-16 shrink-0 items-center">
-                    <img
+                    {/* <img
                       className="h-8 w-auto"
                       src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                       alt="Your Company"
-                    />
+                    /> */}
                   </div>
                   <nav className="flex flex-1 flex-col">
                     <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -237,7 +237,7 @@ export default function NewLayout({ children }) {
                                     {item.name}
                                   </span>
                                   <div className="flex w-full justify-end float-right">
-                                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-medium text-gray-400 group-hover:text-white">
+                                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-mono font-medium text-gray-200 group-hover:text-white">
                                       {item.initial}
                                     </span>
                                   </div>
@@ -311,7 +311,7 @@ export default function NewLayout({ children }) {
                             className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
                             aria-hidden="true"
                           />
-                          Settings
+                          Admin Settings
                         </a>
                       </li>
                     </ul>
@@ -328,12 +328,12 @@ export default function NewLayout({ children }) {
         {/* Sidebar component, swap this element with another sidebar if you like */}
         <div className="flex grow flex-col gap-y-5 overflow-y-auto  bg-gray-900 px-6 pb-4">
           <div className="flex align-middle flex-row h-16 items-center">
-            <img className="h-8 w-auto" src="/logo.svg" alt="Workflow" />
+            {/* <img className="h-8 w-auto" src="/logo.svg" alt="Workflow" />
             <Link href="https://peppermint.sh">
               <h1 className="text-4xl ml-2 mt-5 hover:text-green-600 font-extrabold text-white">
                 Peppermint
               </h1>
-            </Link>
+            </Link> */}
           </div>
           <nav className="flex flex-1 flex-col">
             <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -360,7 +360,7 @@ export default function NewLayout({ children }) {
                           />
                           <span className="whitespace-nowrap">{item.name}</span>
                           <div className="flex w-full justify-end float-right">
-                            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-medium text-gray-400 group-hover:text-white">
+                            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-mono font-medium text-gray-200 group-hover:text-white">
                               {item.initial}
                             </span>
                           </div>
@@ -423,7 +423,7 @@ export default function NewLayout({ children }) {
                 </ul>
               </li>
               <li className="mt-auto space-y-4">
-                <a href="https://ko-fi.com/L3L0AA4YE" target="_blank" passHref>
+                {/* <a href="https://ko-fi.com/L3L0AA4YE" target="_blank" passHref>
                   <img
                     className="py-1 h-12 w-full"
                     height="36"
@@ -431,7 +431,7 @@ export default function NewLayout({ children }) {
                     border="0"
                     alt="Buy Me a Coffee at ko-fi.com"
                   />
-                </a>
+                </a> */}
                 {session.user.isAdmin && (
                   <Link
                     href="/admin"
@@ -448,8 +448,8 @@ export default function NewLayout({ children }) {
                     />
                     <span className="whitespace-nowrap">Admin Settings</span>
                     <div className="flex w-full justify-end float-right">
-                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-medium text-gray-400 group-hover:text-white">
-                        a
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-mono font-medium text-gray-200 group-hover:text-white">
+                        A
                       </span>
                     </div>
                   </Link>
@@ -490,10 +490,10 @@ export default function NewLayout({ children }) {
                 onClick={() => {
                   spotlight.open();
                 }}
-                className="block w-full hover:cursor-pointer rounded-md border-0 py-1.5 pr-14 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full hover:cursor-pointer rounded-md border-0 py-1.5 pr-14 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:font-semibold focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
               <div className="absolute inset-y-0 right-0 flex py-2.5 pr-1">
-                <kbd className="inline-flex items-center rounded border border-gray-200 px-1.5 font-sans text-xs text-gray-400">
+                <kbd className="inline-flex justify-center items-center rounded border w-7 font-mono text-xs text-gray-400 border-gray-700 bg-gray-800">
                   /
                 </kbd>
               </div>

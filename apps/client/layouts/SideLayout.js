@@ -186,11 +186,11 @@ export default function SideLayout({ children }) {
                   </Transition.Child>
                   <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                     <div className="flex items-center flex-shrink-0 px-4">
-                      <img
+                      {/* <img
                         className="h-8 w-auto"
                         src="/logo.svg"
                         alt="Workflow"
-                      />
+                      /> */}
                     </div>
                     <nav className="mt-5 px-2 space-y-1">
                       <CreateTicketModal />
@@ -337,16 +337,16 @@ export default function SideLayout({ children }) {
               <div className="flex flex-col h-0 flex-1 bg-gray-900">
                 <div className="flex-1 flex flex-col pt-5 overflow-y-auto">
                   <div className="flex flex-shrink-0 px-4 align-middle flex-row">
-                    <img
+                    {/* <img
                       className="h-8 w-auto"
                       src="/logo.svg"
                       alt="Workflow"
-                    />
+                    /> 
                     <Link href="https://peppermint.sh">
                       <h1 className="text-2xl ml-2 mt-1 hover:text-green-600 font-extrabold text-white">
                         Peppermint
                       </h1>
-                    </Link>
+                    </Link> */}
                   </div>
                   <nav className="mt-1 flex-1 px-2 bg-gray-900 space-y-1">
                     <CreateTicketModal />
@@ -449,7 +449,7 @@ export default function SideLayout({ children }) {
                           </span>
                         </div>
                       </Link>
-                      <a
+                      {/* <a
                         href="https://ko-fi.com/L3L0AA4YE"
                         target="_blank"
                         passHref
@@ -461,7 +461,7 @@ export default function SideLayout({ children }) {
                           border="0"
                           alt="Buy Me a Coffee at ko-fi.com"
                         />
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -498,10 +498,7 @@ export default function SideLayout({ children }) {
                 onClick={() => setSidebarOpen(true)}
               >
                 <span className="sr-only">Open sidebar</span>
-                <Bars3Icon
-                  className="h-6 w-6"
-                  aria-hidden="true"
-                />
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
             <main className="flex-1 relative z-0 focus:outline-none overflow-y-auto bg-slate-100">

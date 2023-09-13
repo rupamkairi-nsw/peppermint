@@ -8,17 +8,17 @@ export default async function getTodo(req, res) {
   console.log("Session", session);
 
   try {
-    // const todos = await prisma.todos.findMany({
-    //   where: { userId: session.id },
-    //   select: {
-    //     id: true,
-    //     text: true,
-    //     done: true,
-    //   },
-    // });
-    const todos = await (
-      await axios.get("http://localhost:3333/todos/by/" + session.id)
-    ).data;
+    const todos = await prisma.todos.findMany({
+      where: { userId: session.id },
+      select: {
+        id: true,
+        text: true,
+        done: true,
+      },
+    });
+    // const todos = await (
+    //   await axios.get("http://localhost:3333/todos/by/" + session.id)
+    // ).data;
 
     res.status(201).json({ success: true, message: "Todo saved", todos });
   } catch (error) {

@@ -55,46 +55,46 @@ function Auth({ children }) {
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const router = useRouter();
 
-  console.log(router)
+  console.log(router);
 
   const actions = [
     {
       title: "Home",
       description: "Get to home page",
-      onTrigger: () => router.push('/'),
+      onTrigger: () => router.push("/"),
       icon: <HomeIcon className="h-8 w-8 text-gray-900" />,
     },
     {
       title: "Notebook",
       description: "Personal User Notes",
-      onTrigger: () => router.push('/notebook'),
+      onTrigger: () => router.push("/notebook"),
       icon: <FolderIcon className="h-8 w-8 text-gray-900" />,
     },
     {
       title: "Tickets",
       description:
         "Central store for all company & user tickets, open or closed",
-      onTrigger: () => router.push('/tickets'),
+      onTrigger: () => router.push("/tickets"),
       icon: <TicketIcon className="h-8 w-8 text-gray-900" />,
     },
-    {
-      title: "Documentation",
-      description: "Documentation for peppermint.sh",
-      onTrigger: () => router.push('https://docs.peppermint.sh'),
-      icon: <DocumentCheckIcon className="h-8 w-8 text-gray-900" />,
-    },
-    {
-      title: "Github",
-      description: "OSS codebase for peppermint",
-      onTrigger: () => router.push('https://github.com/Peppermint-Lab/peppermint'),
-      icon: <img className="h-7 ml-1 w-auto" src="/github.svg" alt="Workflow" />,
-    },
-    {
-      title: "Peppermint.sh",
-      description: "",
-      onTrigger: () => router.push('https://peppermint.sh'),
-      icon: <img className="h-7 ml-1 w-auto" src="/logo.svg" alt="Workflow" />,
-    },
+    // {
+    //   title: "Documentation",
+    //   description: "Documentation for peppermint.sh",
+    //   onTrigger: () => router.push('https://docs.peppermint.sh'),
+    //   icon: <DocumentCheckIcon className="h-8 w-8 text-gray-900" />,
+    // },
+    // {
+    //   title: "Github",
+    //   description: "OSS codebase for peppermint",
+    //   onTrigger: () => router.push('https://github.com/Peppermint-Lab/peppermint'),
+    //   icon: <img className="h-7 ml-1 w-auto" src="/github.svg" alt="Workflow" />,
+    // },
+    // {
+    //   title: "Peppermint.sh",
+    //   description: "",
+    //   onTrigger: () => router.push('https://peppermint.sh'),
+    //   icon: <img className="h-7 ml-1 w-auto" src="/logo.svg" alt="Workflow" />,
+    // },
   ];
 
   if (router.asPath.slice(0, 5) === "/auth") {
@@ -146,25 +146,25 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     );
   }
 
-  if (router.pathname === ("/notebook/[id]")) {
+  if (router.pathname === "/notebook/[id]") {
     return (
       <SessionProvider session={session}>
         <MantineProvider withNormalizeCSS withGlobalStyles>
-        <SpotlightProvider
-          shortcut={["mod + P", "mod + K", "/"]}
-          actions={actions}
-          searchPlaceholder="Search ..."
-        >
-        <QueryClientProvider client={queryClient}>
-          <Auth>
-            <NewLayout>
-              <NoteBookLayout>
-                <Component {...pageProps} />
-              </NoteBookLayout>
-            </NewLayout>
-          </Auth>
-        </QueryClientProvider>
-        </SpotlightProvider>
+          <SpotlightProvider
+            shortcut={["mod + P", "mod + K", "/"]}
+            actions={actions}
+            searchPlaceholder="Search ..."
+          >
+            <QueryClientProvider client={queryClient}>
+              <Auth>
+                <NewLayout>
+                  <NoteBookLayout>
+                    <Component {...pageProps} />
+                  </NoteBookLayout>
+                </NewLayout>
+              </Auth>
+            </QueryClientProvider>
+          </SpotlightProvider>
         </MantineProvider>
       </SessionProvider>
     );
@@ -185,7 +185,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
                 <Component {...pageProps} />
               </NewLayout>
             </Auth>
-
           </QueryClientProvider>
         </SpotlightProvider>
       </MantineProvider>

@@ -150,8 +150,8 @@ export default function CreateTicketModal() {
             {t("create_ticket")}
           </span>
           <div className="flex w-full justify-end float-right">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-medium text-gray-400 group-hover:text-white">
-              c
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-mono font-medium text-gray-200 group-hover:text-white">
+              C
             </span>
           </div>
         </button>
