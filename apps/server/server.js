@@ -1,12 +1,13 @@
-import dotenv from "dotenv";
-dotenv.config();
+import "dotenv/config";
 import express from "express";
 import { json, urlencoded } from "express";
-import cookieParser from "cookie-parser";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 import todosRouter from "./routes/todos/index.js";
 
 const app = express();
+
+console.log();
 
 app.use(json());
 app.use(urlencoded({ extended: true }));

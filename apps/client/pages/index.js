@@ -163,7 +163,7 @@ export default function Home() {
       <div className="w-full xl:w-[70%]">
         <div className="bg-white shadow rounded-lg">
           <div className="px-4 sm:px-6 lg:w-full lg:mx-auto lg:px-8">
-            <div className="py-1 md:flex md:items-center md:justify-between">
+            <div className="py-4 md:flex md:items-center md:justify-between">
               <div className="flex-1 min-w-0">
                 {/* Profile */}
                 <div className="flex items-center">
@@ -174,16 +174,16 @@ export default function Home() {
                   </span>
                   <div>
                     <div className="flex items-center">
-                      <span className="pt-4 text-2xl font-bold leading-7 text-gray-900 sm:ml-3 sm:leading-9 sm:truncate">
+                      <span className="text-2xl font-bold leading-7 text-gray-900 sm:ml-3 sm:leading-9 sm:truncate">
                         {t("hello_good")}
                         {hour < 12
                           ? t("hello_morning")
                           : t("hello_afternoon")}, {session.user.name}!
                       </span>
                     </div>
-                    <dl className="flex flex-col sm:ml-3 sm:mt-1 sm:flex-row sm:flex-wrap">
+                    <dl className="flex flex-col sm:ml-3 sm:flex-row sm:flex-wrap">
                       <dt className="sr-only">{t("account_status")}</dt>
-                      <dd className="mt-3 flex items-center text-sm text-gray-500 font-medium sm:mr-6 sm:mt-0 capitalize">
+                      <dd className="flex items-center text-sm text-gray-500 font-medium sm:mr-6 sm:mt-0 capitalize">
                         <CheckCircleIcon
                           className="flex-shrink-0 mr-1.5 h-5 w-5 text-green-400"
                           aria-hidden="true"
@@ -513,7 +513,7 @@ export default function Home() {
           </>
         )}
       </div>
-      <div className="flex-1 xl:ml-4 bg-white rounded-lg shadow-md p-4 md:p-6 2xl:max-h-[53vh]">
+      <div className="flex-1 xl:ml-4 bg-white rounded-lg shadow-md p-2 md:p-4 xl:p-6 2xl:max-h-[53vh]">
         <span className="font-bold text-2xl">Reminders</span>
         <ListTodo />
       </div>

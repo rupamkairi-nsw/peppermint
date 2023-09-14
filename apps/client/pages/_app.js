@@ -1,30 +1,19 @@
-import "../styles/globals.css";
 import "antd/dist/antd.css";
+import "../styles/globals.css";
 
-import React from "react";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { useRouter } from "next/router";
-import { SessionProvider, useSession } from "next-auth/react";
-import ScaleLoader from "react-spinners/ScaleLoader";
-import Head from "next/head";
+import { FolderIcon, HomeIcon, TicketIcon } from "@heroicons/react/24/outline";
 import { MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
 import { SpotlightProvider } from "@mantine/spotlight";
-import {
-  DocumentCheckIcon,
-  FolderIcon,
-  HomeIcon,
-  MenuIcon,
-  TicketIcon,
-  XIcon,
-} from "@heroicons/react/24/outline";
+import { SessionProvider, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
-import { ThemeProvider } from "next-themes";
-
+import AdminLayout from "../layouts/adminLayout";
 import NewLayout from "../layouts/newLayout";
 import NoteBookLayout from "../layouts/notebook";
-import AdminLayout from "../layouts/adminLayout";
-import { DocumentArrowDownIcon } from "@heroicons/react/20/solid";
 
 const queryClient = new QueryClient();
 

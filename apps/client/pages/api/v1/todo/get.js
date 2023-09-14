@@ -1,4 +1,6 @@
-const { prisma } = require("../../../../prisma/prisma");
+// const { prisma } = require("../../../../prisma/prisma");
+// const { prisma } = require("../../../../prisma/prisma");
+import { prisma } from "database";
 import { getSession } from "next-auth/react";
 import axios from "axios";
 
