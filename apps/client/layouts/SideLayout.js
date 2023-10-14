@@ -177,10 +177,10 @@ export default function SideLayout({ children }) {
                         onClick={() => setSidebarOpen(false)}
                       >
                         <span className="sr-only">Close sidebar</span>
-                        {/* <XIcon
+                        <XIcon
                           className="h-6 w-6 text-white"
                           aria-hidden="true"
-                        /> */}
+                        />
                       </button>
                     </div>
                   </Transition.Child>

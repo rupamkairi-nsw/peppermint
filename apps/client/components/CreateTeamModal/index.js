@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { XIcon } from "@heroicons/react/outline";
+import { XIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
 
 export default function CreateUser() {

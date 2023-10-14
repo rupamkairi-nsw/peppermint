@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment, useRef } from "react";
 import { Dialog, Transition, Listbox } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/20/solid";
+// import { XIcon } from "@heroicons/react/24/outline";
 import useTranslation from "next-translate/useTranslation";
 import { RichTextEditor, Link } from "@mantine/tiptap";
 import { useEditor } from "@tiptap/react";
